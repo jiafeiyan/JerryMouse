@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="io.jerry.modules.wechat.dao.WxReserveDao">
+
+	<!-- 可根据自己的需求，是否要使用 -->
+    <resultMap type="io.jerry.modules.wechat.entity.WxReserveEntity" id="wxReserveMap">
+        <result property="reserveId" column="reserve_id"/>
+        <result property="reserveUserId" column="reserve_user_id"/>
+        <result property="reserveTime" column="reserve_time"/>
+        <result property="reserveStoreid" column="reserve_storeid"/>
+    </resultMap>
+
+
+</mapper>
