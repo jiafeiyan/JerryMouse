@@ -4,6 +4,8 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import io.jerry.modules.wechat.entity.WxCouponEntity;
 import org.apache.ibatis.annotations.Mapper;
 
+import java.util.List;
+
 /**
  * 
  * 
@@ -14,4 +16,5 @@ import org.apache.ibatis.annotations.Mapper;
 @Mapper
 public interface WxCouponDao extends BaseMapper<WxCouponEntity> {
 
+    List<WxCouponEntity> queryUserCoupon(String userId);
 }
