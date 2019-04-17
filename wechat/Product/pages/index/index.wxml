@@ -13,37 +13,37 @@
     <view class="page__bd">
       <view class="weui-grids">
         <block>
-          <navigator url="" class="weui-grid" hover-class="weui-grid_active">
+          <navigator url="/pages/product_catalog/index" class="weui-grid" hover-class="weui-grid_active">
             <view class="iconfont icon-icon-test"></view>
             <view class="weui-grid__label">阳台窗</view>
           </navigator>
         </block>
         <block>
-          <navigator url="" class="weui-grid" hover-class="weui-grid_active">
+          <navigator url="/pages/product_catalog/index" class="weui-grid" hover-class="weui-grid_active">
             <view class="iconfont icon-tuilamen1"></view>
             <view class="weui-grid__label">推拉门</view>
           </navigator>
         </block>
         <block>
-          <navigator url="" class="weui-grid" hover-class="weui-grid_active">
+          <navigator url="/pages/product_catalog/index" class="weui-grid" hover-class="weui-grid_active">
             <view class="iconfont icon-shuangkaimen1"></view>
             <view class="weui-grid__label">厨房门</view>
           </navigator>
         </block>
         <block>
-          <navigator url="" class="weui-grid" hover-class="weui-grid_active">
+          <navigator url="/pages/product_catalog/index" class="weui-grid" hover-class="weui-grid_active">
             <view class="iconfont icon-men"></view>
             <view class="weui-grid__label">平开门</view>
           </navigator>
         </block>
         <block>
-          <navigator url="" class="weui-grid" hover-class="weui-grid_active">
+          <navigator url="/pages/product_catalog/index" class="weui-grid" hover-class="weui-grid_active">
             <view class="iconfont icon-chuanghu"></view>
             <view class="weui-grid__label">窗</view>
           </navigator>
         </block>
         <block>
-          <navigator url="" class="weui-grid" hover-class="weui-grid_active">
+          <navigator url="/pages/product_catalog/index" class="weui-grid" hover-class="weui-grid_active">
             <view class="iconfont icon--fangzi"></view>
             <view class="weui-grid__label">阳光房</view>
           </navigator>
