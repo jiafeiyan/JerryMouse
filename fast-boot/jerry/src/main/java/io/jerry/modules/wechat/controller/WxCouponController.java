@@ -49,7 +49,8 @@ public class WxCouponController {
     @RequestMapping("/listAll/{userId}")
     @ApiOperation("查询当前用户的所有优惠券【未过期】")
     public R userAll(@PathVariable("userId") String userId){
-        return R.ok();
+        List<WxCouponEntity> couponEntities = wxCouponService.queryUserCoupon(userId);
+        return R.ok().put("wxCoupons",couponEntities);
     }
 
     /**

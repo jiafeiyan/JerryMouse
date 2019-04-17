@@ -6,18 +6,17 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import io.jerry.common.utils.PageUtils;
 import io.jerry.common.utils.Query;
 import io.jerry.common.utils.R;
-import io.jerry.common.utils.UUIDUtils;
 import io.jerry.modules.wechat.dao.WxCouponDao;
 import io.jerry.modules.wechat.entity.WxCouponEntity;
 import io.jerry.modules.wechat.entity.WxUserCouponEntity;
-import io.jerry.modules.wechat.entity.WxUserEntity;
 import io.jerry.modules.wechat.service.WxCouponService;
 import io.jerry.modules.wechat.service.WxUserCouponService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
-import java.time.LocalTime;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.Map;
 
@@ -30,7 +29,7 @@ public class WxCouponServiceImpl extends ServiceImpl<WxCouponDao, WxCouponEntity
 
     @Override
     public PageUtils queryPage(Map<String, Object> params) {
-        String now = LocalDate.now().toString().replace("-","");
+        String now = LocalDate.now().format(DateTimeFormatter.ofPattern("yyyyMMdd"));
         IPage<WxCouponEntity> page = this.page(
                 new Query<WxCouponEntity>().getPage(params),
                 new QueryWrapper<WxCouponEntity>().ge("coupon_expired",  now)
@@ -41,8 +40,7 @@ public class WxCouponServiceImpl extends ServiceImpl<WxCouponDao, WxCouponEntity
 
     @Override
     public List<WxCouponEntity> queryUserCoupon(String userId) {
-
-        return null;
+        return baseMapper.queryUserCoupon(userId);
     }
 
     @Override
@@ -62,7 +60,7 @@ public class WxCouponServiceImpl extends ServiceImpl<WxCouponDao, WxCouponEntity
             userCouponEntity = new WxUserCouponEntity();
             userCouponEntity.setWxUserId(userId);
             userCouponEntity.setCouponId(couponId);
-            String nowTime = LocalTime.now().toString();
+            String nowTime = LocalDateTime.now().format(DateTimeFormatter.ofPattern("yyyyMMddhhmmss"));
             userCouponEntity.setCouponGetTime(nowTime);
             wxUserCouponService.getBaseMapper().insert(userCouponEntity);
             return R.ok();
@@ -71,7 +69,7 @@ public class WxCouponServiceImpl extends ServiceImpl<WxCouponDao, WxCouponEntity
 
     @Override
     public WxCouponEntity listOne(String couponId) {
-        String now = LocalDate.now().toString().replace("-","");
+        String now = LocalDate.now().format(DateTimeFormatter.ofPattern("yyyyMMdd"));
         return this.getOne(new QueryWrapper<WxCouponEntity>()
                 .ge("coupon_expired",  now)
                 .eq("coupon_id", couponId));
