@@ -1,0 +1,10 @@
+<view class="coupon-item">
+  <view class="coupon-money">
+    <view class="nick" wx:if="{{!types}}">所有商品使用</view>
+    <view class="layof">￥500</view>
+    <view class="end_time">2019-10-01前使用</view>
+    <view class="tit">券号：000000001</view>
+  </view>
+  <view class="get-btn" wx:if="{{types}}">选择使用</view>
+  <view class="get-btn" wx:if="{{!types}}" >立即使用</view>
+</view>

@@ -1,0 +1,16 @@
+<!--components/product/index.wxml-->
+<view class="product-item">
+  <view class="product-img">
+    <image src="/images/product/banner2.jpg"></image>
+  </view>
+  <view class="product-type">
+    <text>C13T7 阳台窗</text>
+  </view>
+  <view class="product-description">
+    <text>成于心 精于艺 成就非凡之美</text>
+  </view>
+  <view class="product-bottom">
+    <text class="product-price">26800.00/m²</text>
+    <text class="product-like">66人喜欢</text>
+  </view>
+</view>

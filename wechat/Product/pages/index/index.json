@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "v-coupon": "/components/coupon/index",
+    "v-product": "/components/product/index"
+  }
+}

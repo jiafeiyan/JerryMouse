@@ -1,0 +1,79 @@
+<!-- 头部轮播图 -->
+<view>
+  <swiper class="carousel" indicator-dots="true" autoplay="true">
+    <swiper-item wx:for="{{carouselList}}" wx:key="index">
+      <image class="header-img" src="{{item.src}}" />
+    </swiper-item>
+  </swiper>
+</view>
+
+<!-- 商品分类 -->
+<view class="page">
+  <view class="page__bd">
+    <view class="weui-grids">
+      <block>
+        <navigator url="" class="weui-grid" hover-class="weui-grid_active">
+          <view class="iconfont icon-icon-test"></view>
+          <view class="weui-grid__label">阳台窗</view>
+        </navigator>
+      </block>
+      <block>
+        <navigator url="" class="weui-grid" hover-class="weui-grid_active">
+          <view class="iconfont icon-tuilamen1"></view>
+          <view class="weui-grid__label">推拉门</view>
+        </navigator>
+      </block>
+      <block>
+        <navigator url="" class="weui-grid" hover-class="weui-grid_active">
+          <view class="iconfont icon-shuangkaimen1"></view>
+          <view class="weui-grid__label">厨房门</view>
+        </navigator>
+      </block>
+      <block>
+        <navigator url="" class="weui-grid" hover-class="weui-grid_active">
+          <view class="iconfont icon-men"></view>
+          <view class="weui-grid__label">平开门</view>
+        </navigator>
+      </block>
+      <block>
+        <navigator url="" class="weui-grid" hover-class="weui-grid_active">
+          <view class="iconfont icon-chuanghu"></view>
+          <view class="weui-grid__label">窗</view>
+        </navigator>
+      </block>
+      <block>
+        <navigator url="" class="weui-grid" hover-class="weui-grid_active">
+          <view class="iconfont icon--fangzi"></view>
+          <view class="weui-grid__label">阳光房</view>
+        </navigator>
+      </block>
+    </view>
+  </view>
+</view>
+
+<!-- 优惠券 -->
+<view class="index-coupon">
+  <view class="coupon-header">
+    <view class="coupon-header-icon">
+      <text class="iconfont icon-fudai"></text>
+      <text class="coupon-header-name">优惠券</text>
+    </view>
+    <view class="coupon-header-title">
+      <text>领券购物更便宜</text>
+    </view>
+  </view>
+  <view class="coupon-content">
+    <v-coupon></v-coupon>
+  </view>
+</view>
+
+<!-- 人气商品 -->
+<view class="index-product">
+  <view class="product_header">
+      <text class="iconfont icon-fudai"></text>
+      <text class="coupon-header-name">人气商品</text>
+  </view>
+  <view class="product-content">
+      <v-product></v-product>
+  </view>
+</view>
