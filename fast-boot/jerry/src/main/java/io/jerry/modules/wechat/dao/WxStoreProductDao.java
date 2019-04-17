@@ -1,7 +1,7 @@
 package io.jerry.modules.wechat.dao;
 
+import io.jerry.modules.wechat.entity.WxStoreProductEntity;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import io.jerry.modules.wechat.entity.WxCouponEntity;
 import org.apache.ibatis.annotations.Mapper;
 
 /**
@@ -12,6 +12,6 @@ import org.apache.ibatis.annotations.Mapper;
  * @date 2019-04-16 18:19:21
  */
 @Mapper
-public interface WxCouponDao extends BaseMapper<WxCouponEntity> {
-
+public interface WxStoreProductDao extends BaseMapper<WxStoreProductEntity> {
+	
 }

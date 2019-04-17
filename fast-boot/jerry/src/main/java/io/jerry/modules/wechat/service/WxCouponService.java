@@ -19,7 +19,7 @@ public interface WxCouponService extends IService<WxCouponEntity> {
 
     PageUtils queryPage(Map<String, Object> params);
 
-    List<WxCouponEntity> selectUserCoupon(String userId);
+    List<WxCouponEntity> queryUserCoupon(String userId);
 
     R receiveCoupon(String userId, String couponId);
 

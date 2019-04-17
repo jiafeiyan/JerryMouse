@@ -13,7 +13,21 @@
         <result property="couponExpired" column="coupon_expired"/>
     </resultMap>
 
-    <select id="selectUserCoupon" resultMap="wxCouponMap">
-
+    <select id="queryUserCoupon" resultMap="wxCouponMap">
+      SELECT
+        c.coupon_id,
+        c.coupon_amount,
+        c.coupon_amout_des,
+        c.coupon_belong,
+        c.coupon_effective,
+        c.coupon_expired
+    FROM
+        wx_user u,
+        wx_user_coupon uc,
+        wx_coupon c
+    WHERE
+        u.wx_user_id = uc.wx_user_id
+        AND uc.coupon_id = c.coupon_id
+        AND uc.wx_user_id = #{userId}
     </select>
 </mapper>

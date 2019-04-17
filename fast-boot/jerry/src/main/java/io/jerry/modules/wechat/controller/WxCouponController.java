@@ -6,6 +6,8 @@ import io.jerry.common.utils.R;
 import io.jerry.common.utils.UUIDUtils;
 import io.jerry.modules.wechat.entity.WxCouponEntity;
 import io.jerry.modules.wechat.service.WxCouponService;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -25,6 +27,7 @@ import java.util.Map;
  */
 @RestController
 @RequestMapping("wechat/wxcoupon")
+@Api("优惠券接口")
 public class WxCouponController {
     @Autowired
     private WxCouponService wxCouponService;
@@ -33,6 +36,7 @@ public class WxCouponController {
      * 分页查询优惠券【未过期】
      */
     @RequestMapping("/list")
+    @ApiOperation("分页查询优惠券【未过期】")
     public R list(@RequestParam Map<String, Object> params){
         PageUtils page = wxCouponService.queryPage(params);
 
@@ -42,7 +46,8 @@ public class WxCouponController {
     /**
      * 查询当前用户的所有优惠券【未过期】
      */
-    @RequestMapping("/{userId}/all")
+    @RequestMapping("/listAll/{userId}")
+    @ApiOperation("查询当前用户的所有优惠券【未过期】")
     public R userAll(@PathVariable("userId") String userId){
         return R.ok();
     }
@@ -50,7 +55,8 @@ public class WxCouponController {
     /**
      * 用户领取优惠券【未过期】
      */
-    @RequestMapping("/{userId}/{couponId}")
+    @RequestMapping("/save/{userId}/{couponId}")
+    @ApiOperation("用户领取优惠券【未过期】")
     public R userReceiveCoupon(@PathVariable("userId") String userId,
                         @PathVariable("couponId") String couponId){
         return wxCouponService.receiveCoupon(userId, couponId);
@@ -60,6 +66,7 @@ public class WxCouponController {
      * 查询单条优惠券信息【未过期】
      */
     @RequestMapping("/info/{couponId}")
+    @ApiOperation("查询单条优惠券信息【未过期】")
     public R info(@PathVariable("couponId") String couponId){
         WxCouponEntity wxCoupon = wxCouponService.listOne(couponId);
         return R.ok().put("wxCoupon", wxCoupon);
