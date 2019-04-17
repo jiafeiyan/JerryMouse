@@ -1,6 +1,6 @@
 import {
   HTTP
-} from '../util/http-p.js'
+} from '../utils/http-p.js'
 
 class ProductModel extends HTTP {
   // 查询所有商品信息
