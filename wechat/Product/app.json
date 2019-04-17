@@ -3,7 +3,7 @@
     "pages/index/index",
     "pages/brand/index",
     "pages/my/index",
-    "pages/product_detail/indexx"
+    "pages/product_detail/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
