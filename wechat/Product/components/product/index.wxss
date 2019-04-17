@@ -1,0 +1,5 @@
+/* components/product/index.wxss */
+.product-img image{
+  width: 100%;
+  height: 240rpx;
+}

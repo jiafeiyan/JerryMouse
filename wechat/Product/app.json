@@ -1,0 +1,14 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/brand/index",
+    "pages/my/index",
+    "pages/product_detail/indexx"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "博士门业",
+    "navigationBarTextStyle": "black"
+  }
+}
