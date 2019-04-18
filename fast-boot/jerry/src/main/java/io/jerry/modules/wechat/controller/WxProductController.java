@@ -35,7 +35,7 @@ public class WxProductController {
      * 列表
      */
     @RequestMapping("/list")
-    public R list(@RequestParam Map<String, Object> params){
+    public R list(@RequestBody Map<String, Object> params){
         PageUtils page = wxProductService.queryPage(params);
 
         return R.ok().put("page", page);

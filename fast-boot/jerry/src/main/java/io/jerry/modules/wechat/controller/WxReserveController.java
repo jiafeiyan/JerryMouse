@@ -30,7 +30,7 @@ public class WxReserveController {
      * 列表
      */
     @RequestMapping("/list")
-    public R list(@RequestParam Map<String, Object> params){
+    public R list(@RequestBody Map<String, Object> params){
         PageUtils page = wxReserveService.queryPage(params);
 
         return R.ok().put("page", page);
