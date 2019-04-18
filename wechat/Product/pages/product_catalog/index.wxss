@@ -9,3 +9,6 @@
     padding-top: 60px;
     text-align: center;
 }
+.weui-navbar__slider{
+  width: 3rem;
+}

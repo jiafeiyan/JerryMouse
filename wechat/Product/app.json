@@ -11,5 +11,30 @@
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "博士门业",
     "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "backgroundColor": "#ffffff",
+    "color": "#c7c7c7",
+    "selectedColor": "#000000",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/images/tab/index.png",
+        "selectedIconPath": "/images/tab/index@highlight.png"
+      },
+      {
+        "pagePath": "pages/brand/index",
+        "text": "品牌",
+        "iconPath": "/images/tab/brand.png",
+        "selectedIconPath": "/images/tab/brand@highlight.png"
+      },
+      {
+        "pagePath": "pages/my/index",
+        "text": "我",
+        "iconPath": "/images/tab/my.png",
+        "selectedIconPath": "/images/tab/my@highlight.png"
+      }
+    ]
   }
 }
