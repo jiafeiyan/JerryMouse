@@ -3,6 +3,7 @@
   <view class="product-img">
     <image src="/images/product/banner2.jpg"></image>
   </view>
+  <view class="product-content">
   <view class="product-type">
     <text>C13T7 阳台窗</text>
   </view>
@@ -14,5 +15,6 @@
     <view class="product-likenumber">
       <v-like like="{{true}}" count="{{66}}" readOnly="{{true}}"></v-like>
     </view>
+  </view>
   </view>
 </view>

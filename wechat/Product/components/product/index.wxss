@@ -21,3 +21,11 @@
   position: absolute;
   right: 40rpx;
 }
+
+.product-content{
+  text-align: left;
+}
+
+.product-item{
+  margin-top: 10rpx;
+}

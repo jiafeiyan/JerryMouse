@@ -6,7 +6,6 @@
     padding-bottom: 0;
 }
 .weui-tab__content{
-    padding-top: 60px;
     text-align: center;
 }
 .weui-navbar__slider{

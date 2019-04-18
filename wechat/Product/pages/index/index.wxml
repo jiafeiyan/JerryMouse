@@ -76,6 +76,7 @@
     </view>
     <view class="product-content">
         <v-product></v-product>
+        <v-product></v-product>
     </view>
   </view>
 </view>

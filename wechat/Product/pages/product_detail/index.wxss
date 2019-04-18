@@ -4,3 +4,6 @@
   height: 100%;
   border-radius: 10rpx;
 }
+.weui-tab__content{
+  text-align: left;
+}
