@@ -2,7 +2,7 @@
   <!-- 头部轮播图 -->
   <view>
     <swiper class="carousel" indicator-dots="true" autoplay="true">
-      <swiper-item wx:for="{{carouselList}}" wx:key="index">
+      <swiper-item bindtap="onTapImage" wx:for="{{carouselList}}" wx:key="index">
         <image class="header-img" src="{{item.src}}" />
       </swiper-item>
     </swiper>

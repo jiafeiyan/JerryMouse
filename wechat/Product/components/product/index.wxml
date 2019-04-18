@@ -1,5 +1,5 @@
 <!--components/product/index.wxml-->
-<view class="product-item">
+<view class="product-item" bindtap="onTap">
   <view class="product-img">
     <image src="/images/product/banner2.jpg"></image>
   </view>

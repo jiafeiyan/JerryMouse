@@ -81,5 +81,10 @@ Page({
    */
   onShareAppMessage: function() {
 
+  },
+  onTapImage:function(){
+    wx.navigateTo({
+      url: "/pages/product_detail/index",
+    })
   }
 })

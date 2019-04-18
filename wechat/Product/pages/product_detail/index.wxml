@@ -1,2 +1,11 @@
 <!--pages/product_detail/index.wxml-->
-<text>pages/product_detail/index.wxml</text>
+<view class="container">
+  <!-- 头部轮播图 -->
+  <view>
+    <swiper class="carousel" indicator-dots="true" autoplay="true">
+      <swiper-item wx:for="{{carouselList}}" wx:key="index">
+        <image class="header-img" src="{{item.src}}" />
+      </swiper-item>
+    </swiper>
+  </view>
+</view>
