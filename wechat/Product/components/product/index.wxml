@@ -11,6 +11,8 @@
   </view>
   <view class="product-bottom">
     <text class="product-price">26800.00/m²</text>
-    <text class="product-like">66人喜欢</text>
+    <view class="product-likenumber">
+      <v-like like="{{true}}" count="{{66}}" readOnly="{{true}}"></v-like>
+    </view>
   </view>
 </view>

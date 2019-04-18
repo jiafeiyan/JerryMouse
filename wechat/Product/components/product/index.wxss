@@ -3,3 +3,21 @@
   width: 100%;
   height: 240rpx;
 }
+
+.product-description{
+  font-size: 20rpx;
+}
+
+.product-price{
+  color: rgb(255, 115, 0);
+}
+
+.product-bottom{
+  position: relative;
+}
+
+.product-likenumber{
+  display: inline-block;
+  position: absolute;
+  right: 40rpx;
+}
