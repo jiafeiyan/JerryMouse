@@ -78,3 +78,10 @@ jerry:
     # token有效时长，7天，单位秒
     expire: 604800
     header: token
+
+auth:
+  wechat:
+    sessionHost: https://api.weixin.qq.com/sns/jscode2session
+    appId: wx16f73da498a433da
+    secret: c754426cab8c6a4a18f6917479f2e6e1
+    grantType: authorization_code

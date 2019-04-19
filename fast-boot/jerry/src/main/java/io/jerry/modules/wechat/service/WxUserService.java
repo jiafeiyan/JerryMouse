@@ -5,6 +5,8 @@ import com.baomidou.mybatisplus.extension.service.IService;
 import io.jerry.modules.wechat.entity.WxUserEntity;
 import io.jerry.modules.wechat.form.WechatAuthForm;
 
+import java.util.HashMap;
+
 
 /**
  * 
@@ -18,5 +20,7 @@ public interface WxUserService extends IService<WxUserEntity> {
     WxUserEntity queryByMobile(String mobile);
 
     String checkUser(WechatAuthForm form);
+
+    HashMap<String, String> wechatLogin(String code);
 }
 

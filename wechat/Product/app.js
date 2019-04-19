@@ -1,10 +1,27 @@
 App({
-
+  globalData: {
+    userInfo: null,
+    token : null
+  },
   /**
    * 当小程序初始化完成时，会触发 onLaunch（全局只触发一次）
    */
   onLaunch: function () {
-    
+    // 登录
+    wx.login({
+      success: res => {
+        if (res.code) {
+          wx.request({
+            url: 'http://127.0.0.1:8080/jerry-fast/wechat/oauth',
+            method: 'post',
+            data: { code: res.code },
+            success: res => {
+              this.globalData.token = res.data.token
+            }
+          })
+        }
+      }
+    })
   },
 
   /**

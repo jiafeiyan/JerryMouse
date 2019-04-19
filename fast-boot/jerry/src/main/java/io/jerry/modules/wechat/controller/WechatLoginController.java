@@ -1,5 +1,6 @@
 package io.jerry.modules.wechat.controller;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import io.jerry.common.utils.R;
 import io.jerry.common.utils.UUIDUtils;
 import io.jerry.common.validator.ValidatorUtils;
@@ -10,10 +11,8 @@ import io.jerry.modules.wechat.service.WxUserService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.client.RestTemplate;
 
 import java.util.Date;
 import java.util.HashMap;
@@ -32,11 +31,33 @@ import java.util.Map;
 @Api("微信登录接口")
 public class WechatLoginController {
 
+
     @Autowired
     private WxUserService userService;
 
     @Autowired
     private JwtUtils jwtUtils;
+
+    /**
+     * 登录
+     */
+    @PostMapping("oauth")
+    @ApiOperation("登录")
+    public R login(@RequestBody Map<String, Object> params){
+        String code = (String)params.get("code");
+
+        HashMap<String, String> wechatAuthCode = userService.wechatLogin(code);
+
+        // 获取token
+        String token = jwtUtils.generateToken(wechatAuthCode.get("openid"));
+
+        Map<String, Object> map = new HashMap<>();
+        map.put("token", token);
+        map.put("expire", jwtUtils.getExpire());
+
+
+        return R.ok(map);
+    }
 
     /**
      * 登录
