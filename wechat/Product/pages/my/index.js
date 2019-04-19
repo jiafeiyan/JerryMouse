@@ -1,18 +1,55 @@
-// pages/my/index.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    hasUserInfo: true,
+    userInfo: null,
+  },
+  userAuthorized() {
+    wx.getSetting({
+      success: data => {
+        if (data.authSetting['scope.userInfo']) {
+          wx.getUserInfo({
+            success: data => {
+              this.setData({
+                hasUserInfo: true,
+                userInfo: data.userInfo
+              })
+            }
+          })
+        } else {
+          this.setData({
+            hasUserInfo: false
+          })
+        }
+      }
+    })
   },
 
+  onGetUserInfo(event) {
+    let userInfo = event.detail.userInfo
+    if (userInfo) {
+      this.setData({
+        hasUserInfo: true,
+        userInfo: userInfo
+      })
+    }
+  },
+  onJumpToAbout() {
+
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    this.userAuthorized()
+    wx.getUserInfo({
+      success: data => {
 
+      }
+    })
   },
 
   /**

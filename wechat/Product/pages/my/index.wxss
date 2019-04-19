@@ -1,1 +1,35 @@
-/* pages/my/index.wxss */
+.container{
+  display:flex;
+  flex-direction:column;
+  align-items: center;
+}
+
+.bg{
+  width:750rpx;
+  height:474rpx;
+}
+
+.avatar-position{
+  position:absolute; 
+  top:155rpx;
+}
+
+.my-img{
+  width:120rpx;
+  height:100rpx;
+}
+
+.avatar-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.avatar{
+  width:120rpx;
+  height:120rpx;
+  border-radius: 50%;
+  overflow: hidden;
+  /* margin-bottom: 10rpx; */
+}
+

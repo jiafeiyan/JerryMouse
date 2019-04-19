@@ -1,2 +1,12 @@
-<!--pages/my/index.wxml-->
-<text>pages/my/index.wxml</text>
+<!--pages/my/my.wxml-->
+<view class="container">
+  <image src="/images/my/my@bg.png" class="bg"></image>
+  <!-- 此处的open-type 实际是给image-button中的openType属性传值,但是规定驼峰的openType在使用的时候必须用open-type的形式(命名规则转换) -->
+  <v-button wx:if="{{!hasUserInfo}}" open-type="getUserInfo" class="avatar-position" bind:getUser="onGetUserInfo">
+    <image slot="image" class="avatar" src="/images/my/my.png"></image>
+  </v-button>
+  <view class="avatar-container avatar-position">
+    <image src="{{userInfo.avatarUrl}}" wx:if="{{hasUserInfo}}" class="avatar" />
+    <open-data wx:if="{{hasUserInfo}}" type="userNickName"></open-data>
+  </view>
+</view>
