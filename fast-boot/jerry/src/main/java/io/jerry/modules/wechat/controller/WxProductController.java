@@ -2,7 +2,11 @@ package io.jerry.modules.wechat.controller;
 
 import java.util.Arrays;
 import java.util.Map;
+import java.util.UUID;
 
+import io.jerry.common.utils.UUIDUtils;
+import io.jerry.modules.app.annotation.Login;
+import io.swagger.annotations.Api;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -27,6 +31,7 @@ import io.jerry.common.utils.R;
  */
 @RestController
 @RequestMapping("wechat/wxproduct")
+@Api("商品接口")
 public class WxProductController {
     @Autowired
     private WxProductService wxProductService;
@@ -34,6 +39,7 @@ public class WxProductController {
     /**
      * 列表
      */
+    @Login
     @RequestMapping("/list")
     public R list(@RequestBody Map<String, Object> params){
         PageUtils page = wxProductService.queryPage(params);
@@ -57,6 +63,7 @@ public class WxProductController {
      */
     @RequestMapping("/save")
     public R save(@RequestBody WxProductEntity wxProduct){
+        wxProduct.setProductId(UUIDUtils.getUUID());
 		wxProductService.save(wxProduct);
 
         return R.ok();

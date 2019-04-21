@@ -3,6 +3,7 @@ package io.jerry.modules.wechat.controller;
 import java.util.Arrays;
 import java.util.Map;
 
+import io.swagger.annotations.Api;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -27,6 +28,7 @@ import io.jerry.common.utils.R;
  */
 @RestController
 @RequestMapping("wechat/wxcategories")
+@Api("商品分类接口")
 public class WxCategoriesController {
     @Autowired
     private WxCategoriesService wxCategoriesService;

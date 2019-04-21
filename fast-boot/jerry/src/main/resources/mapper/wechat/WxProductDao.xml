@@ -4,7 +4,7 @@
 <mapper namespace="io.jerry.modules.wechat.dao.WxProductDao">
 
 	<!-- 可根据自己的需求，是否要使用 -->
-    <resultMap type="io.jerry.modules.wechat.entity.WxProductEntity" id="wxProductMap">
+    <resultMap type="io.jerry.modules.wechat.dto.WxProductDTO" id="wxProductMap">
         <result property="productId" column="product_id"/>
         <result property="productName" column="product_name"/>
         <result property="productModel" column="product_model"/>
@@ -13,7 +13,46 @@
         <result property="productCategoriesId" column="product_categories_id"/>
         <result property="productLoopimgurl" column="product_loopimgurl"/>
         <result property="productImgurl" column="product_imgurl"/>
+        <result property="storeId" column="store_id"/>
+        <result property="storeName" column="store_name"/>
+        <result property="storeStaff" column="store_staff"/>
+        <result property="storeAddr" column="store_addr"/>
+        <result property="storePhone" column="store_phone"/>
+        <result property="storeLongitude" column="store_longitude"/>
+        <result property="storeLatitude" column="store_latitude"/>
+        <result property="productUpper" column="product_upper"/>
+        <result property="productUpperTime" column="product_upper_time"/>
     </resultMap>
 
+    <select id="queryProductWithStore" resultMap="wxProductMap">
+        SELECT
+            p.product_id,
+            p.product_name,
+            p.product_model,
+            p.product_price,
+            p.product_introduce,
+            p.product_categories_id,
+            p.product_loopimgurl,
+            p.product_imgurl,
+            st.store_id,
+            st.store_name,
+            st.store_staff,
+            st.store_addr,
+            st.store_phone,
+            st.store_longitude,
+            st.store_latitude,
+            sp.product_upper,
+            sp.product_upper_time
+        FROM
+            wx_store st,
+            wx_store_product sp,
+            wx_product p
+        WHERE
+            st.store_id = sp.store_id
+            AND sp.product_id = p.product_id
+            <if test="productId != null"> and  p.product_id = #{productId}</if>
+            <if test="storeId != null"> and  st.storeId = #{storeId}</if>
+            <if test="productUpper != null"> and  sp.productUpper = #{productUpper}</if>
+    </select>
 
 </mapper>

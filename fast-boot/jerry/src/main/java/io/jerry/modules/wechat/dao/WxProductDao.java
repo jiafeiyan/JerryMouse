@@ -1,8 +1,15 @@
 package io.jerry.modules.wechat.dao;
 
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import io.jerry.modules.wechat.dto.WxProductDTO;
 import io.jerry.modules.wechat.entity.WxProductEntity;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
+import org.springframework.data.convert.EntityWriter;
+
+import java.util.List;
+import java.util.Map;
 
 /**
  * 
@@ -13,5 +20,7 @@ import org.apache.ibatis.annotations.Mapper;
  */
 @Mapper
 public interface WxProductDao extends BaseMapper<WxProductEntity> {
-	
+
+    //查询店铺产品
+	List<WxProductDTO> queryProductWithStore(Map<String, Object> params);
 }
