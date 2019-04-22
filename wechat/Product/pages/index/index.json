@@ -1,6 +1,7 @@
 {
   "usingComponents": {
     "v-coupon": "/components/coupon/index",
+    "v-miniCoupon": "/components/mini-coupon/index",
     "v-product": "/components/product/index"
   }
 }

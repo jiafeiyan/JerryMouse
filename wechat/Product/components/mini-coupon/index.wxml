@@ -1,0 +1,14 @@
+<view class="container">
+  <view class="container_left">
+    <view class='price'>
+       <text class='p_left'>@</text>
+       <text class='p_right'>100</text>
+    </view>
+  </view>
+  <view class='container_right'>
+     <view>门窗</view>
+     <view>直减券</view>
+  </view>
+  <view class="c_top"></view>
+  <view class="c_bottom"></view>
+</view>
