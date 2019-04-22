@@ -9,6 +9,7 @@
   color: #fff;
   position: relative;
   margin-left: 10rpx;
+  margin-top: 5rpx;
 }
 .container_left{
   width: 60%;

@@ -13,11 +13,46 @@
   </view>
 
   <view class="my_coupon">
-    <view>我的优惠券</view>
-    <view></view>
+    <view class="my_coupon_header">我的优惠券</view>
+    <scroll-view class="my_coupon-scroll" scroll-y="{{true}}">
+      <view class="my_coupon_content">
+        <view class="my_coupon_item">
+          <v-miniCoupon></v-miniCoupon>
+        </view>
+        <view class="my_coupon_item">
+          <v-miniCoupon></v-miniCoupon>
+        </view>
+        <view class="my_coupon_item">
+          <v-miniCoupon></v-miniCoupon>
+        </view>
+        <view class="my_coupon_item">
+          <v-miniCoupon></v-miniCoupon>
+        </view>
+        <view class="my_coupon_item">
+          <v-miniCoupon></v-miniCoupon>
+        </view>
+        <view class="my_coupon_item">
+          <v-miniCoupon></v-miniCoupon>
+        </view>
+      </view>
+    </scroll-view>
   </view>
   <view class="my_reserve">
-    <view>我的预约</view>
-    <view></view>
+    <view class="my_reserve_header">我的预约</view>
+    <view class="my_reserve_content">
+      <view class="my_reserve_left">
+        <view class="store_name">博士门窗居然之家店</view>
+        <view class="store_address">湖北省武汉市武昌区和平大道793号居然之家星南方店负一楼博士门窗</view>
+        <view class="store_map">
+          <view class="iconfont icon-ditu"></view>
+          <view class="store_map_distance">{{distance}}公里</view>
+          <view class="store_map_url" bindtap="goto">到这里去</view>
+        </view>
+      </view>
+      <view class="my_reserve_right">
+        <view class="iconfont icon-weibiaoti-"></view>
+        <view class="store_text" bindtap="call">一键呼叫</view>
+      </view>
+    </view>
   </view>
 </view>

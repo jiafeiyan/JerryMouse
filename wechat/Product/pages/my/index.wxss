@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: #f5f5f5;
 }
 
 .bg {
@@ -33,4 +34,106 @@
 
 .header-container {
   position: relative;
+}
+
+.my_coupon {
+  background-color: #fff;
+  width: 95%;
+  margin: auto;
+  height: 300rpx;
+}
+
+.my_coupon_header {
+  border-bottom: 1rpx solid #f5f5f5;
+  width: 95%;
+  margin: auto;
+  font-size: 28rpx;
+  color: #9b9b9b;
+  padding-top: 10rpx;
+  padding-bottom: 10rpx;
+}
+
+.my_reserve {
+  margin-top: 20rpx;
+  background-color: #fff;
+  width: 95%;
+  height: 300rpx;
+}
+
+.my_reserve_header {
+  border-bottom: 1rpx solid #f5f5f5;
+  width: 95%;
+  margin: auto;
+  font-size: 28rpx;
+  color: #9b9b9b;
+  padding-top: 10rpx;
+  padding-bottom: 10rpx;
+}
+
+.my_coupon_content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+
+.my_coupon_item {
+  margin-left: 30rpx;
+}
+
+.my_coupon-scroll {
+  height: 210rpx;
+}
+
+.my_reserve_content {
+  display: flex;
+  flex-direction: row;
+}
+
+.my_reserve_left {
+  margin-left: 20rpx;
+  width: 80%;
+}
+
+.store_name {
+  font-size: 40rpx;
+}
+
+.store_address {
+  margin-top: 5rpx;
+  font-size: 25rpx;
+}
+
+.store_map {
+  display: flex;
+  flex-direction: row;
+  margin-top: 10rpx;
+}
+
+.my_reserve_right {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  align-items: center;
+  margin: auto;
+}
+
+.store_text {
+  font-size: 25rpx;
+  color: rgb(117, 231, 9);
+}
+
+.store_map_distance {
+  font-size: 30rpx;
+}
+
+.store_map_url {
+  font-size: 30rpx;
+  margin-left: 10rpx;
+  text-decoration: underline;
+  color: orange;
+}
+
+.icon-weibiaoti- {
+  font-size: 50rpx;
 }
