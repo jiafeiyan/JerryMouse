@@ -5,9 +5,14 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    aboutme:'/images/brand/aboutme.jpeg'
   },
 
+  call() {
+    wx.makePhoneCall({
+      phoneNumber: '18510097098',
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

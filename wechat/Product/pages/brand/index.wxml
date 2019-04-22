@@ -1,2 +1,8 @@
 <!--pages/brand/index.wxml-->
-<text>pages/brand/index.wxml</text>
+<view class="container">
+  <image class="aboutme" src="{{aboutme}}"></image>
+  <view class="footer">
+    <view class="phone-number">800-010-9999</view>
+    <view class="text" bindtap="call">更多咨询</view>
+  </view>
+</view>
