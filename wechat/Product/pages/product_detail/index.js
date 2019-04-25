@@ -1,4 +1,6 @@
 // pages/product_detail/index.js
+var sliderWidth = 85; // 需要设置slider的宽度，用于计算中间位置
+
 Page({
 
   /**
@@ -17,14 +19,27 @@ Page({
         src: "/images/product/banner4.jpg",
         background: "rgb(183, 73, 69)",
       }
-    ]
+    ],
+    tabs: ["商品详情", "最新评论"],
+    activeIndex: 0,
+    sliderOffset: 0,
+    sliderLeft: 0,
+    aboutme: '/images/brand/aboutme.jpeg'
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function(options) {
-
+  onLoad: function() {
+    var that = this;
+    wx.getSystemInfo({
+      success: function (res) {
+        that.setData({
+          sliderLeft: (res.windowWidth / that.data.tabs.length - sliderWidth) / 2,
+          sliderOffset: res.windowWidth / that.data.tabs.length * that.data.activeIndex
+        });
+      }
+    });
   },
 
   /**
@@ -74,5 +89,11 @@ Page({
    */
   onShareAppMessage: function() {
 
+  },
+  tabClick: function (e) {
+    this.setData({
+      sliderOffset: e.currentTarget.offsetLeft,
+      activeIndex: e.currentTarget.id
+    });
   }
 })

@@ -1,4 +1,3 @@
-<!--pages/product_detail/index.wxml-->
 <view class="container">
   <!-- 头部轮播图 -->
   <view>
@@ -7,5 +6,128 @@
         <image class="header-img" src="{{item.src}}" />
       </swiper-item>
     </swiper>
+  </view>
+
+  <!-- 商品简介 -->
+  <view class='product_introduce'>
+    <view class='product_price'>
+      <view>C137T 阳台窗</view>
+      <view>2487.00元/m2</view>
+    </view>
+    <view class='product_slogan'>
+      <view>精选材质</view>
+      <view>达细致之美</view>
+      <view>成于心</view>
+      <view>精于艺</view>
+      <view>成就非凡之美</view>
+    </view>
+    <view class='c_img'>
+      <view>
+        <image src='/images/detail/love.png' />
+      </view>
+      <view>
+        <image src='/images/detail/girl.png' />
+      </view>
+      <view>
+        <image src='/images/detail/girl.png' />
+      </view>
+      <view>
+        <image src='/images/detail/girl.png' />
+      </view>
+      <view>
+        <image src='/images/detail/girl.png' />
+      </view>
+      <view>
+        <image src='/images/detail/girl.png' />
+      </view>
+      <view>
+        <image src='/images/detail/girl.png' />
+      </view>
+    </view>
+    <view class='c_want'>等
+      <text>16</text>人想买</view>
+    <view class='c_coupon'>
+      <text>领券</text>
+      <view>
+        <text>满2499减50</text>
+      </view>
+    </view>
+    <view class='c_service'>
+      <view>服务</view>
+      <view>
+        <image src='/images/detail/yes.png' />
+        <text>博仕唯一官方商城</text>
+      </view>
+      <view>
+        <image src='/images/detail/yes.png' />
+        <text>免费量尺</text>
+      </view>
+      <view>
+        <image src='/images/detail/yes.png' />
+        <text>免费安装</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 商品详情页评论 -->
+  <view class="switch">
+    <view class="page__bd">
+      <view class="weui-tab">
+        <view class="weui-navbar">
+          <block wx:for="{{tabs}}" wx:key="*this">
+            <view id="{{index}}" class="weui-navbar__item {{activeIndex == index ? 'weui-bar__item_on' : ''}}" bindtap="tabClick">
+              <view class="weui-navbar__title">{{item}}</view>
+            </view>
+          </block>
+          <view class="weui-navbar__slider" style="left: {{sliderLeft}}px; transform: translateX({{sliderOffset}}px); -webkit-transform: translateX({{sliderOffset}}px);"></view>
+        </view>
+        <view class="weui-tab__panel">
+          <view class="weui-tab__content" hidden="{{activeIndex != 0}}">
+            <image class="aboutme" src="{{aboutme}}"></image>
+            <view class="near_store">
+              <view class="title">
+                距离您最近的门店
+              </view>
+              <view class="store_content">
+                <view class="store_name">博士门窗居然之家店</view>
+                <view class="store_address">湖北省武汉市武昌区和平大道793号居然之家星南方店负一楼博士门窗</view>
+                <view class="store_way">
+                  <view class="iconfont icon-ditu"></view>
+                  <view class="distance">19公里</view>
+                  <view class="iconfont icon-weibiaoti-"></view>
+                  <view class="call">一键呼叫</view>
+                  <view class="address_goto">到这里去</view>
+                </view>
+              </view>
+            </view>
+          </view>
+          <view class="weui-tab__content" hidden="{{activeIndex != 1}}">
+          <view class="coments">
+              <text>暂无评论</text>
+          </view>
+            <view class="near_store">
+              <view class="title">
+                距离您最近的门店
+              </view>
+              <view class="store_content">
+                <view class="store_name">博士门窗居然之家店</view>
+                <view class="store_address">湖北省武汉市武昌区和平大道793号居然之家星南方店负一楼博士门窗</view>
+                <view class="store_way">
+                  <view class="iconfont icon-ditu"></view>
+                  <view class="distance">19公里</view>
+                  <view class="iconfont icon-weibiaoti-"></view>
+                  <view class="call">一键呼叫</view>
+                  <view class="address_goto">到这里去</view>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 立即预约 -->
+  <view class="footer">
+    <text>立即预约</text>
   </view>
 </view>
