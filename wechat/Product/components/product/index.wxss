@@ -5,7 +5,9 @@
 }
 
 .product-description{
-  font-size: 20rpx;
+  font-size: 30rpx;
+  color:#a6a6a6;
+  margin-top:-10rpx;
 }
 
 .product-price{
@@ -14,6 +16,7 @@
 
 .product-bottom{
   position: relative;
+  margin-top:14rpx;
 }
 
 .product-likenumber{
@@ -24,6 +27,9 @@
 
 .product-content{
   text-align: left;
+  font-size: 36rpx;
+  margin-top:20rpx;
+  margin-left:30rpx;
 }
 
 .product-item{

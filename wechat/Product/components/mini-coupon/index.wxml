@@ -1,7 +1,7 @@
 <view class="container">
   <view class="container_left">
     <view class='price'>
-       <text class='p_left'>@</text>
+       <text class='p_left'>￥</text>
        <text class='p_right'>100</text>
     </view>
   </view>

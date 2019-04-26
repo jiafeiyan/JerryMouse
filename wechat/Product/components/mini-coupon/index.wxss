@@ -28,8 +28,9 @@
   align-items: center;
 }
 .p_left{
-  font-size: 16rpx;
+  font-size: 18rpx;
   margin-top:10rpx;
+  font-weight: bolder;
 }
 .p_right{
   font-size: 36rpx;

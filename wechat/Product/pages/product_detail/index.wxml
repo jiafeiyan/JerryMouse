@@ -12,7 +12,7 @@
   <view class='product_introduce'>
     <view class='product_price'>
       <view>C137T 阳台窗</view>
-      <view>2487.00元/m2</view>
+      <view>2487.00元/m²</view>
     </view>
     <view class='product_slogan'>
       <view>精选材质</view>
@@ -92,7 +92,7 @@
                 <view class="store_name">博士门窗居然之家店</view>
                 <view class="store_address">湖北省武汉市武昌区和平大道793号居然之家星南方店负一楼博士门窗</view>
                 <view class="store_way">
-                  <view class="iconfont icon-ditu"></view>
+                  <view class="iconfont icon-ditu" style='color:#D41C03'></view>
                   <view class="distance">19公里</view>
                   <view class="iconfont icon-weibiaoti-"></view>
                   <view class="call">一键呼叫</view>

@@ -60,7 +60,7 @@
         <text class="coupon-header-name">优惠券</text>
       </view>
       <view class="coupon-header-title">
-        <text>领券购物更便宜</text>
+        <text>领券购物更优惠</text>
       </view>
     </view>
     <scroll-view scroll-x="{{true}}">
